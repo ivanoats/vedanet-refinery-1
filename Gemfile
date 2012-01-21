@@ -8,6 +8,7 @@ source 'http://rubygems.org'
 gem 'sqlite3'
 gem 'fog'
 gem 'dalli'
+gem 'pg'
 
 # Use unicorn as the web server
 # gem 'unicorn'
