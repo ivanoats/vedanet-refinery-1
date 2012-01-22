@@ -1,0 +1,688 @@
+/**************************************************************************
+----------------------------------------------- GLOBAL RESET --------------------------------------------------------
+**************************************************************************/
+/*
+Copyright (c) 2010, Yahoo! Inc. All rights reserved.
+Code licensed under the BSD License:
+http://developer.yahoo.com/yui/license.html
+version: 3.1.1
+build: 47
+*/
+body,
+div,
+dl,
+dt,
+dd,
+ul,
+ol,
+li,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+pre,
+code,
+form,
+fieldset,
+legend,
+input,
+textarea,
+p,
+blockquote,
+th,
+td {
+	margin:0;
+	padding:0;
+}
+table {
+	border-collapse:collapse;
+	border-spacing:0;
+}
+fieldset,
+img {
+	border:0;
+}
+address,
+caption,
+cite,
+code,
+dfn,
+th,
+var {
+	font-style:normal;
+	font-weight:normal;
+}
+li {
+	list-style:none;
+}
+caption,
+th {
+	text-align:left;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	font-size:100%;
+	font-weight:normal;
+}
+q:before,
+q:after {
+	content:'';
+}
+abbr,
+acronym {
+	border:0;
+	font-variant:normal;
+}
+sup {
+	vertical-align:text-top;
+}
+sub {
+	vertical-align:text-bottom;
+}
+input,
+textarea,
+select {
+	font-family:inherit;
+	font-size:inherit;
+	font-weight:inherit;
+}
+input,
+textarea,
+select {
+*font-size:100%;
+}
+legend {
+	color:#000;
+}
+/**************************************************************************
+------------------------------------------------ GENERAL ---------------------------------------------------------------
+**************************************************************************/
+body {
+	background:#9386a3 url(images/bg.png) repeat-x top;
+	font:normal 16px/1.25 "Trebuchet MS", Arial, Helvetica, sans-serif;
+	color:#333;
+	text-align:center;
+	}
+input, select, textarea {
+	font-size: 100%;
+	font-family:inherit;
+	}
+.clearfix:after {
+  content: "."; 
+  display: block; 
+  height: 0; 
+  clear: both; 
+  visibility: hidden;
+  }
+a:active,
+a:focus {
+	outline: none;
+	}
+	
+/**************************************************************************
+----------------------------------------------- MAIN STRUCTURE ----------------------------------------------------
+**************************************************************************/
+#wrapper {
+	background:url(images/header-bg.png) no-repeat top center;
+	min-width:1020px;
+	min-height:321px;
+}
+#container {
+	margin:0 auto;
+	width:960px;
+	text-align:left;
+	}
+#header {
+	width:1020px;
+	margin:0 auto;
+	height:181px;
+	position:relative;
+	}
+#content {
+	width:1018px;
+	margin:0 auto;
+	background:#f2f2d8;
+	-moz-border-radius:16px;
+	-webkit-border-radius:16px;
+	border:1px solid #aaaa98;
+	}
+#content:after {
+  content: "."; 
+  display: block; 
+  height: 0; 
+  clear: both; 
+  visibility: hidden;
+  }
+#maincol {
+	width:672px;
+	float:right;
+	padding:0 40px 0 40px;
+	margin:24px 0;
+	border-left:1px solid #c6d2b3;
+	}
+#sidecol {
+	width:226px;
+	float:right;
+	padding:0 20px 0 0;
+	margin:24px 0;
+	border-right:1px solid #c6d2b3;
+	position:relative;
+	left:1px;
+	}
+#footer {
+	}
+	
+/**************************************************************************
+-------------------------------------------------------- HEADER --------------------------------------------------------
+**************************************************************************/
+#header h2 span,
+#header h3 {
+	display:none;
+}
+
+/* --
+***** Main Navigation
+-------------------------------------------------------------------------*/
+#header ul {
+	background:#d4dcbe;
+	-moz-border-radius:16px 16px 0 0;
+	-webkit-border-radius:16px 16px 0 0;
+	border:1px solid #aaaa98;
+	border-bottom:none;
+	width:auto;
+	display:inline-block;
+	position:absolute;
+	top:140px;
+	right:26px;
+	margin:0;
+}
+#header ul:after {
+  content: "."; 
+  display: block; 
+  height: 0; 
+  clear: both; 
+  visibility: hidden;
+  }
+#header ul li {
+	display:inline;
+}
+#header ul li a {
+	display:block;
+	float:left;
+	height:40px;
+	width:auto;
+	padding:0 25px;
+	font:normal 18px/40px Garamond, Georgia, "Times New Roman", Times, serif;
+	color:#39462c;
+	text-decoration:none;
+	border-right:1px solid #aaaa98;
+	border-bottom:1px solid #aaaa98;
+}
+#header ul li:first-child a {
+	-moz-border-radius:16px 0 0 0;
+	-webkit-border-radius:16px 0 0 0;
+}
+#header ul li:last-child a {
+	border-right:none;
+	-moz-border-radius:0 16px 0 0;
+	-webkit-border-radius:0 16px 0 0;
+}
+#header ul li a:hover {
+	background:#afc7b2;
+	-webkit-transition: all 400ms; /*safari and chrome */
+	-moz-transition: all 400ms ease; /* firefox */
+	-o-transition: all 400ms ease; /* opera */
+	transition: all 400ms ease;
+}
+#header ul li.current a {
+	background:#f2f2d8;
+	border-bottom:1px solid #f2f2d8;
+	color:#50370d;
+}
+#header ul li.current a:hover {
+	background:#f2f2d8;
+}
+	
+/**************************************************************************
+-------------------------------------------------- MAIN COLUMN ----------------------------------------------------
+**************************************************************************/
+#maincol h1 {
+	margin:21px 0;
+	font:normal 32px/1 Garamond, Georgia, "Times New Roman", Times, serif;
+	color:#742020;
+	letter-spacing:-0.02em;
+}
+#maincol h2 {
+	margin:30px 0;
+	font:normal 26px/1 Garamond, Georgia, "Times New Roman", Times, serif;
+	color:#742020;
+	letter-spacing:-0.02em;
+}
+#maincol h3 {
+	margin:24px 0 12px 0;
+	font:normal 23px/1 Garamond, Georgia, "Times New Roman", Times, serif;
+	color:#c65301;
+}
+#maincol h2 a,
+#maincol h3 a {
+	color:#c65301;
+	text-decoration:none;
+}
+#maincol h2 a:hover,
+#maincol h3 a:hover {
+	color:#f2f2d8;
+}
+#maincol p {
+	margin:1em 0;
+}
+#maincol a {
+	color:#2f7301;
+	-moz-border-radius:3px;
+	-webkit-border-radius:3px;
+}
+#maincol a:hover {
+	background:#f6a236;
+	color:#f2f2d8;
+	-webkit-transition: all 400ms; /*safari and chrome */
+	-moz-transition: all 400ms ease; /* firefox */
+	-o-transition: all 400ms ease; /* opera */
+	transition: all 400ms ease;
+	text-decoration:none;
+}
+
+/* --
+***** More / Less Collapse Feature
+-------------------------------------------------------------------------*/
+#maincol p.more-less {
+	margin:-10px 0 1em 0;
+}
+#maincol p.more-less a {
+	display:inline-block;
+	width:auto;
+	-moz-border-radius:4px;
+	-webkit-border-radius:4px;
+	background:#b8ca84;
+	font:bold 13px/1 "Trebuchet MS", Arial, Helvetica, sans-serif;
+	color:#f2f2d8;
+	padding:6px 10px 7px 12px;
+	text-decoration:none;
+}	
+#maincol p.more-less a:hover {
+	background:#8db3a7;
+	-webkit-transition: all 400ms; /*safari and chrome */
+	-moz-transition: all 400ms ease; /* firefox */
+	-o-transition: all 400ms ease; /* opera */
+	transition: all 400ms ease;
+}
+
+/* --
+***** Biographies Section
+-------------------------------------------------------------------------*/
+#maincol .bio-block:after {
+  content: "."; 
+  display: block; 
+  height: 0; 
+  clear: both; 
+  visibility: hidden;
+}
+#maincol .bio-block img {
+	float:left;
+	margin:0 20px 20px 0;
+	width:211px;
+}
+#maincol .bio-block p {
+	margin:0 0 1em 0;
+	width:440px;
+	float:right;
+}
+
+/* --
+***** Featured Content Blocks
+-------------------------------------------------------------------------*/
+#maincol .feature-block {
+	padding:20px 20px 0 20px;
+	margin:60px 0 30px 0;
+	-moz-border-radius:12px;
+	-webkit-border-radius:12px;
+	background:#eaeace;
+	border:1px solid #dfe4c8;
+	position:relative;
+	clear:both;
+}
+#maincol .feature-block:after {
+  content: "."; 
+  display: block; 
+  height: 0; 
+  clear: both; 
+  visibility: hidden;
+  }
+#maincol .feature-block.first {
+	margin-top:30px;
+}
+#maincol .feature-block h2 {
+	margin:1em 0 .1em 0;
+}
+#maincol .feature-block h2:first-child {
+	margin-top:0;
+}
+#maincol .feature-block h3 {
+	clear:both;
+}
+#maincol .feature-block p {
+	margin:-5px 0 20px 0;
+}
+#maincol .feature-block img {
+	float:left;
+	margin: 0 20px  20px 0;
+}
+
+/** -------------With Horizontal Images  ---------- **/
+#maincol .feature-block .horizontal img {
+	width:252;
+}
+#maincol .feature-block .horizontal p {
+	width:358px;
+	float:right;
+	margin: 0 0  20px 0;
+}
+
+/** -------------With Vertical Images  ---------- **/
+#maincol .feature-block .vertical img {
+	width:112px;
+}
+#maincol .feature-block .vertical p {
+	width:498px;
+	float:right;
+	margin: 0 0  20px 0;
+}
+
+/** -------------More Link  ---------- **/
+#maincol .feature-block .more a {
+	display:inline-block;
+	padding:5px 10px 10px 10px;
+	position:absolute;
+	bottom:-30px;
+	right:20px;
+	-moz-border-radius:0 0 12px 12px;
+	-webkit-border-radius:0 0 12px 12px;
+	background:#eaeace;
+	border:1px solid #dfe4c8;
+	border-top:1px solid #eaeace;
+	font-size:13px;
+	line-height:13px;
+	color:#9b9b6c;
+	text-decoration:none;
+}
+#maincol .feature-block .more a:hover {
+	text-decoration:underline;
+}
+	
+/**************************************************************************
+---------------------------------------------------- SIDE COLUMN -----------------------------------------------------
+**************************************************************************/
+#sidecol {
+	font-size:14px;
+}
+#sidecol h3 {
+	margin:40px 0 10px 0;
+	font:normal 22px/1 Garamond, Georgia, "Times New Roman", Times, serif;
+	color:#742020;
+	letter-spacing:-0.02em;
+}
+#sidecol a {
+	color:#568c35;
+	-moz-border-radius:3px;
+	-webkit-border-radius:3px;
+}
+#sidecol a:hover {
+	background:#f6a236;
+	color:#f2f2d8;
+	-webkit-transition: all 400ms; /*safari and chrome */
+	-moz-transition: all 400ms ease; /* firefox */
+	-o-transition: all 400ms ease; /* opera */
+	transition: all 400ms ease;
+	text-decoration:none;
+}
+#sidecol ul {
+	margin:10px 0 10px 10px;
+}
+#sidecol li {
+	margin:6px 0 6px 16px;
+	color:#d4dcbe;
+	list-style-type:disc;
+}
+#sidecol .more {
+	margin:12px 0;
+	padding:6px 0 0 0;
+	border-top:1px solid #ceceac;
+	text-align:right;
+}
+#sidecol .more a {
+	font-size:13px;
+	color:#9b9b6c;
+	text-decoration:none;
+}
+#sidecol .more a:hover {
+	text-decoration:underline;
+	background:none;
+}
+
+/* --
+***** Search
+-------------------------------------------------------------------------*/
+#sidecol #search {
+	margin:0 0 -10px 0;
+}
+#sidecol #search input.text {
+	width:190px;
+	padding:4px 5px 4px 25px;
+	border:1px solid #c6d2b3;
+	-moz-border-radius:12px;
+	-webkit-border-radius:12px;
+	color:#7e7e76;
+	font:normal 14px/1 "Trebuchet MS", Arial, Helvetica, sans-serif;
+	background:#fcfcf5 url(images/icn-magnify.gif) no-repeat 6px 5px;
+}
+#sidecol #search input.submit {
+	display:none;
+}
+
+/* --
+***** Courses
+-------------------------------------------------------------------------*/
+#sidecol .courses ul {
+	margin:10px 0;
+}
+#sidecol .courses li {
+	margin:6px 0 8px 0;
+	padding-left:27px;
+	color:#d4dcbe;
+	list-style-type:none;
+	background:url(images/blt-star.gif) no-repeat 7px 0;
+}
+#sidecol .courses .featured {
+	padding:0;
+	background:none;
+}
+#sidecol .courses .featured.last {
+	margin-bottom:12px;
+}
+#sidecol .courses .featured a {
+	display:block;
+	-moz-border-radius:8px;
+	-webkit-border-radius:8px;
+	padding:6px 6px 6px 27px;
+	background:#d4dcbe url(images/blt-star2.png) no-repeat 7px 6px;
+	text-decoration:none;
+}
+#sidecol .courses .featured a:hover {
+	background:#f6a236 url(images/blt-star2.png) no-repeat 7px 6px;
+}
+
+/* --
+***** Subscribe to Newsletter
+-------------------------------------------------------------------------*/
+#sidecol .subscribe h3 {
+	margin-top:30px;
+}
+#sidecol .subscribe form {
+	padding:15px;
+	background:#eaeace;
+	border:1px solid #dfe4c8;
+	-moz-border-radius:6px;
+	-webkit-border-radius:6px;
+}
+#sidecol .subscribe form:after {
+  content: "."; 
+  display: block; 
+  height: 0; 
+  clear: both; 
+  visibility: hidden;
+  }
+#sidecol .subscribe input.text {
+	width:145px;
+	padding:4px 5px;
+	float:left;
+	border:1px solid #cfd8ba;
+	-moz-border-radius:6px;
+	-webkit-border-radius:6px;
+	color:#7e7e76;
+	font:normal 14px/1 "Trebuchet MS", Arial, Helvetica, sans-serif;
+	background:#f6f6ea;
+}
+#sidecol .subscribe input.submit {
+	padding:2px 6px 3px 6px;
+	float:right;
+	border:none;
+	-moz-border-radius:8px;
+	-webkit-border-radius:8px;
+	color:#7e7e76;
+	font:bold 18px/1 "Trebuchet MS", Arial, Helvetica, sans-serif;
+	background:#b8ca84;
+	color:#f2f2d8;
+}
+#sidecol .subscribe input.submit:hover {
+	background:#f6a236;
+	-webkit-transition: all 400ms; /*safari and chrome */
+	-moz-transition: all 400ms ease; /* firefox */
+	-o-transition: all 400ms ease; /* opera */
+	transition: all 400ms ease;
+}
+
+/* --
+***** RSS Button
+-------------------------------------------------------------------------*/
+#sidecol .rss {
+	margin:30px 0;
+}
+#sidecol .rss a {
+	display:block;
+	padding:12px 8px 13px 38px;
+	-moz-border-radius:8px;
+	-webkit-border-radius:8px;
+	font:normal 14px/1 "Trebuchet MS", Arial, Helvetica, sans-serif;
+	background:#f6a236 url(images/icn-rss.png) no-repeat 8px 8px;
+	color:#f2f2d8;
+	text-decoration:none;
+}
+#sidecol .rss a:hover {
+	background:#8db3a7 url(images/icn-rss.png) no-repeat 8px 8px;
+}
+
+/* --
+***** Learn More
+-------------------------------------------------------------------------*/
+#sidecol .learn h3 {
+	margin-top:30px;
+}
+
+/* --
+***** Facebook
+-------------------------------------------------------------------------*/
+#sidecol .facebook h3 {
+	padding:2px 0 0 28px;
+	margin-top:-2px;
+	background:url(images/icn-facebook.png) no-repeat left;
+}
+
+/* --
+***** Programs & Retreats
+-------------------------------------------------------------------------*/
+#sidecol .programs .date,
+#sidecol .retreats .date {
+	color:#c65301;
+}
+#sidecol .programs .location,
+#sidecol .retreats .location {
+	color:#5e635c;
+}
+
+/* --
+***** Videos
+-------------------------------------------------------------------------*/
+#sidecol .videos span {
+	display:block;
+	margin:4px 0 12px 0;
+	position:relative;
+}
+#sidecol .videos span span {
+	display:block;
+	background:url(images/icn-play.png) no-repeat center center;
+	z-index:100;
+	width:100%;
+	height:100%;
+	margin:0;
+	position:absolute;
+}
+#sidecol .videos span span:hover {
+	background:url(images/icn-play-over.png) no-repeat center center;
+}
+
+/* --
+***** Newsgroup Button
+-------------------------------------------------------------------------*/
+#sidecol .newsgroup {
+	margin:30px 0;
+}
+#sidecol .newsgroup a {
+	display:block;
+	padding:12px 8px 13px 8px;
+	text-align:center;
+	-moz-border-radius:8px;
+	-webkit-border-radius:8px;
+	font:normal 14px/1 "Trebuchet MS", Arial, Helvetica, sans-serif;
+	background:#f6a236;
+	color:#f2f2d8;
+	text-decoration:none;
+}
+#sidecol .newsgroup a:hover {
+	background:#8db3a7;
+}
+
+/**************************************************************************
+------------------------------------------------------- FOOTER  --------------------------------------------------------
+**************************************************************************/
+#footer {
+	text-align:center;
+	margin:30px 0;
+	font-size:16px;
+	color:#eae2f3;
+	position:relative;
+	left:20px;
+	letter-spacing:-0.01em;
+}
+#footer a {
+	color:#eae2f3;
+	text-decoration:none;
+}
+#footer a:hover {
+	text-decoration:underline;
+}
+
+
