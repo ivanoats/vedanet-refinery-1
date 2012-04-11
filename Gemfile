@@ -7,10 +7,7 @@ source 'http://rubygems.org'
 
 gem 'fog'
 gem 'dalli'
-
-group :production do
-  gem 'pg'
-end
+gem 'pg'
 
 group :development, :test do
   gem 'sqlite3'
