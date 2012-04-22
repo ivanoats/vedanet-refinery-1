@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<%= render :partial => "/shared/html_tag" %>
+  <% site_bar = render(:partial => "/shared/site_bar", :locals => {:head => true}) -%>
+  <% content_for :stylesheets, stylesheet_link_tag('styles.css') %>
+  <%= render :partial => "/shared/head" %>
+  <body>
+    <%= site_bar -%>
+    <%= render :partial => "/shared/ie6check" if request.env['HTTP_USER_AGENT'] =~ /MSIE/ -%>
+    <div id="wrapper">
+      <div id="container">
+        <header>
+          <%= render :partial => "/shared/header" -%>
+        </header>
+        <div id="content"
+          <div id="maincol">
+            <section id='page'>
+              <%= yield %>
+            </section>
+          </div>
+          <!-- end maincol -->
+          <div id="sidecol">
+          <form action="#" id="search">
+            <input class="text" type="text" value="search this site" onfocus="select()" />
+            <input type="submit" value="go" class="submit" />
+          </form>
+          </div>
+          <!-- end sidecol"> 
+        </div>
+        <!-- end content -->
+      </div>
+      <!-- end container -->
+      <footer>
+        <%= render :partial => "/shared/footer" -%>
+      </footer>
+    </div>
+    <!-- end wrapper>
+    <%= render :partial => "/shared/javascripts" %>
+  </body>
+</html>
