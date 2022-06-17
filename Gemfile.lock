@@ -81,7 +81,7 @@ GEM
       railties (~> 3.0)
     pg (0.13.2)
     polyglot (0.3.3)
-    rack (1.2.5)
+    rack (1.2.8)
     rack-cache (1.2)
       rack (>= 0.4)
     rack-mount (0.6.14)
