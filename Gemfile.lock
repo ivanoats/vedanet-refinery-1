@@ -169,7 +169,7 @@ GEM
       polyglot
       polyglot (>= 0.3.1)
     truncate_html (0.5.4)
-    tzinfo (0.3.33)
+    tzinfo (0.3.61)
     warden (1.0.6)
       rack (>= 1.0)
     will_paginate (3.0.3)
